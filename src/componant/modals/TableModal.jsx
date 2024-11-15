@@ -26,7 +26,7 @@ function TableModal({ onClick, onOpen }) {
             console.log(totalPrice);
         }
         totalHandle()
-    }, [cartData])
+    },)
 
 
     return (

@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from "react"
 import { createPortal } from "react-dom"
 import TableModal from "../componant/modals/TableModal"
 import { bookContext } from "../context/bookContext"
+import logo from '../assets/images/book-img/log.png'
 
 function Navbar() {
   const [onOpen, setOnOpen] = useState(false)
@@ -30,7 +31,7 @@ function Navbar() {
     <div className="border-b dark:border-[#595959] fixed w-full bg-white dark:bg-[#171923] z-10">
       <div className="max-w-[300px] sm:max-w-[1445px] sm:mx-auto flex justify-between py-5">
         <div>
-          <img className="w-28" src={getImg('../assets/images/logo.png')} alt="logo" />
+          <img className="w-28" src={logo} alt="logo" />
         </div>
         <div className="flex justify-end mr-6">
           <ul className="flex items-center">
