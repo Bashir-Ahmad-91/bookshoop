@@ -20,6 +20,13 @@ function EmptyData() {
 function TableModal({ onClick, onOpen }) {
     const { cartData } = useContext(bookContext)
 
+    const myTotal = cartData.reduce((total, item) => {
+        return (total + item.price)
+    }, 0)
+
+    
+
+  
    
 
     return (
@@ -47,7 +54,7 @@ function TableModal({ onClick, onOpen }) {
 
                             {cartData.length !== 0 ?
                                 cartData.map((i) => (
-                                    <TableModalItems onOpen={onOpen} key={i.id} item={i} />
+                                    <TableModalItems onOpen={onOpen} key={i.id} item={i}/>
                                 ))
                                 :
                                 <EmptyData />}
@@ -61,7 +68,7 @@ function TableModal({ onClick, onOpen }) {
                                 <h4 className="text-2xl pb-10 border-b-2 border-white pt-9 text-center">Order summary</h4>
                                 <div className="flex justify-between items-center px-10 mt-6">
                                     <span>Subtotal</span>
-                                    <span>$300</span>
+                                    <span>${myTotal}</span>
                                 </div>
                                 <div className="flex justify-between items-center px-10 mt-4">
                                     <span>Shipping</span>
@@ -71,7 +78,7 @@ function TableModal({ onClick, onOpen }) {
 
                                 <div className="flex justify-between items-center px-10 mt-4 bg-gray-300 dark:bg-[rgba(140,140,140,0.26)] py-2">
                                     <span>Total</span>
-                                    <span id="total">$300</span>
+                                    <span id="total">${myTotal}</span>
                                 </div>
                             </div>
 

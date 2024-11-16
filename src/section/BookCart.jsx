@@ -18,7 +18,7 @@ function BookCart({item, favoritHandler}) {
     favoritHandler(item, item.id, isFavorit)
     setIsfavorit(!isFavorit)
      
-  }
+  } 
   const clickHandler = () => {
    
   
@@ -27,7 +27,7 @@ function BookCart({item, favoritHandler}) {
     !dataChak &&
     setCartData( [
       ...cartData,
-      item
+      item 
     ]);
     
   }

@@ -6,14 +6,14 @@ import { HiOutlineTrash } from "react-icons/hi"
 import { useContext, useState } from "react"
 import { bookContext } from "../../context/bookContext"
 
-function TableModalItems({item }) {
+function TableModalItems({item}) {
   const [quantity, setQuantity] = useState(1)
   const {cartData, setCartData } = useContext(bookContext)
 
+
+
   const totalPrice = item.price * quantity
-  
-//    totalHandler(totalPrice)
-  
+
 
 
   const deletHandler = () => {
@@ -22,8 +22,14 @@ function TableModalItems({item }) {
         return i.id !== item.id
     }))
   }
+
+const increaseHandler = () => {
   
-  
+    quantity < 5 && setQuantity(quantity + 1)
+}
+ 
+
+
 
   return (
     <tbody>
@@ -44,12 +50,12 @@ function TableModalItems({item }) {
         <td className="px-8">
             <div className="w-[135px] h-[36px] flex justify-around items-center rounded-full bg-[#e6dfdfdd] dark:bg-[#595959]">
                 <div onClick={() => quantity > 1 && setQuantity(quantity - 1)} className="flex justify-center items-center w-full h-full">
-                    <LuMinus />
+                    <LuMinus /> 
                 </div>
                
                 <span className="flex justify-center items-center w-full h-full">{quantity}</span>
 
-                <div onClick={() => quantity < 5 && setQuantity(quantity + 1)} className="flex justify-center items-center w-full h-full">
+                <div onClick={increaseHandler} className="flex justify-center items-center w-full h-full">
                     <FiPlus />
                 </div>
             </div>

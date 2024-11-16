@@ -12,6 +12,8 @@ function Layout() {
   const [open, setOpen] = useState(false)
   const [leftModalOpen, setLeftModalOpen] = useState(false)
 
+  
+
   const bookProvider = {
     data,
     setData,
@@ -20,7 +22,8 @@ function Layout() {
     open,
     setOpen,
     leftModalOpen,
-    setLeftModalOpen
+    setLeftModalOpen,
+    
     
   }
   
