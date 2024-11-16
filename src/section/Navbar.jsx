@@ -1,11 +1,10 @@
 import { IoCartOutline, IoNotifications } from "react-icons/io5"
 import { MdOutlineLightMode } from "react-icons/md"
-import { getImg } from "../utils/getimgl"
 import { useContext, useEffect, useState } from "react"
 import { createPortal } from "react-dom"
 import TableModal from "../componant/modals/TableModal"
 import { bookContext } from "../context/bookContext"
-import logo from '../assets/images/book-img/log.png'
+import logo from '../assets/images/logo.png'
 
 function Navbar() {
   const [onOpen, setOnOpen] = useState(false)
