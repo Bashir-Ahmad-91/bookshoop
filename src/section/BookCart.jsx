@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 
 import { FaStar } from "react-icons/fa"
-import { getImg } from "../utils/getimgl"
 import { IoHeart, IoHeartOutline } from "react-icons/io5"
 import CartModal from "../componant/modals/CartModal"
 import { createPortal } from "react-dom"
@@ -18,6 +17,7 @@ function BookCart({item, favoritHandler}) {
   const handleFavorit = () => {
     favoritHandler(item, item.id, isFavorit)
     setIsfavorit(!isFavorit)
+     
   }
   const clickHandler = () => {
    
@@ -32,9 +32,6 @@ function BookCart({item, favoritHandler}) {
     
   }
 
-  const isFavoritHandler = () => {
-    setIsfavorit(!isFavorit)
-  }
   
   
   return (
@@ -56,7 +53,7 @@ function BookCart({item, favoritHandler}) {
             {isFavorit ? <IoHeart /> : <IoHeartOutline />}
           </div>
         </div>
-        {onOpen ? createPortal( <CartModal isFavoritHandler={isFavoritHandler} favoritHandler={favoritHandler} item={item} onClick={() => setOnOpen(!onOpen)} />, document.getElementById('modal')) : ''}
+        {onOpen ? createPortal( <CartModal isFavorit={isFavorit} setIsfavorit={setIsfavorit} isFavoritHandler={handleFavorit} favoritHandler={favoritHandler} item={item} onClick={() => setOnOpen(!onOpen)} />, document.getElementById('modal')) : ''}
         
         
       </div>

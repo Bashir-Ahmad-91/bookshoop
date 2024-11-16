@@ -2,7 +2,7 @@
 
 import { RxCross1 } from "react-icons/rx"
 import TableModalItems from "./TableModalItems"
-import { useContext, useEffect } from "react"
+import { useContext} from "react"
 import { bookContext } from "../../context/bookContext"
 
 function EmptyData() {
@@ -20,14 +20,7 @@ function EmptyData() {
 function TableModal({ onClick, onOpen }) {
     const { cartData } = useContext(bookContext)
 
-     useEffect(() => {
-        function totalHandle() {
-            const totalPrice = document.getElementById('item_total').innerText
-            console.log(totalPrice);
-        }
-        totalHandle()
-    },)
-
+   
 
     return (
         <div onClick={onClick} className="w-screen h-screen bg-[#191b1942] dark:bg-[#fffa] fixed top-0 left-0 z-20 flex justify-center items-center  ">

@@ -9,9 +9,8 @@ function Body() {
     const [favoritData, setFavoritData] = useState([])
     const favoritHandler = (favoriData1) => {
         setFavoritData(favoriData1)
-        
-
     }
+    
     return (
         <div className="max-w-[1450px] mx-auto ">
             <div className=" grid grid-cols-12 pt-24 justify-center ">

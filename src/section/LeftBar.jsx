@@ -9,10 +9,13 @@ import { createPortal } from "react-dom"
 import { bookContext } from "../context/bookContext"
 import { initialData } from "../data/initialData"
 
+
+
 function LeftBar({favoritData}) {
   const [onOpen, setOnOpen] = useState(false)
   const { setData, leftModalOpen, setLeftModalOpen } = useContext(bookContext);
   const allDAta = initialData()
+  
   
   
 
@@ -62,7 +65,7 @@ function LeftBar({favoritData}) {
                     <span>Coming Soon</span>
                 </div>
 
-                <div onClick={() => setData(favoritData)} className="flex items-center text-lg mt-3 py-2 px-2 rounded-md transition-all ease-linear duration-[0.3s] hover:bg-green-300 cursor-pointer">
+                <div onClick={() => favoritData.length == 0 ? alert('Fevorit Item not Found...'): setData(favoritData)} className="flex items-center text-lg mt-3 py-2 px-2 rounded-md transition-all ease-linear duration-[0.3s] hover:bg-green-300 cursor-pointer">
                     <IoHeartOutline className="mr-3 " />
                     <span>Favorites</span>
                 </div>

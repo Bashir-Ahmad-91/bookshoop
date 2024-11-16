@@ -1,13 +1,11 @@
 /* eslint-disable react/prop-types */
 import { IoHeart, IoHeartOutline } from "react-icons/io5"
-import { getImg } from "../../utils/getimgl"
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import { bookContext } from "../../context/bookContext"
 
 
-function CartModal({onClick, item, favoritHandler, isFavoritHandler}) {
+function CartModal({onClick, item, favoritHandler, isFavoritHandler, isFavorit, setIsfavorit }) {
   const {cartData, setCartData} = useContext(bookContext)
-  const [isFavorit, setIsfavorit] = useState(false)
 
   
   
@@ -26,7 +24,7 @@ function CartModal({onClick, item, favoritHandler, isFavoritHandler}) {
     const handleFavorit = () => {
         favoritHandler(item, item.id, isFavorit)
         setIsfavorit(!isFavorit)
-        isFavoritHandler()
+        isFavoritHandler(() => setIsfavorit(!isFavorit))
       }
     
     return (
@@ -47,7 +45,7 @@ function CartModal({onClick, item, favoritHandler, isFavoritHandler}) {
                     </div>
 
                 </div>
-                <img className="overflow-hidden rounded-r-2xl " src={getImg(`../assets/images/book-img/${item.image}`)} alt="" />
+                <img className="overflow-hidden rounded-r-2xl " src={`${item.image}`} alt="" />
             </div>
 
         </div>
