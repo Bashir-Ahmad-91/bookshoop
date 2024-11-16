@@ -8,6 +8,7 @@ import { useContext, useState } from "react"
 import { createPortal } from "react-dom"
 import { bookContext } from "../context/bookContext"
 import { initialData } from "../data/initialData"
+import { data } from "autoprefixer"
 
 
 
@@ -34,7 +35,9 @@ function LeftBar({favoritData}) {
     }))
   }
   const trendingHandler = () => {
-      setData(allDAta)
+      setData(allDAta.filter((item) => {
+        return item.rating == 5
+      }))
         
         
     }
