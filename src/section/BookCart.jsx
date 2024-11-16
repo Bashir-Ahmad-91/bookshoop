@@ -40,7 +40,7 @@ function BookCart({item, favoritHandler}) {
   return (
     <div  className="md:col-span-4 sm:col-span-6 col-span-12  p-4 border dark:border-[#595959] rounded-lg">
       <div onClick={() => setOnOpen(!onOpen)}>
-          <img  src={getImg(`../assets/images/book-img/${item.image}`)} alt="" />
+          <img  src={item.image} alt="" />
         <h3 className="text-lg font-inter font-medium mt-5">{item.name}</h3>
         <span className="text-sm font-light dark:text-[#8C8C8C]">{item.author}</span>
         </div>

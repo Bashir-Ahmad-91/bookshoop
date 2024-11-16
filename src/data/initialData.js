@@ -1,10 +1,11 @@
+import image from '../assets/images/book-img/1.jpg'
 function initialData () {
     return(
     [
         {
             "id": "01",
             "name": "The Blacked Hunter",
-            "image": "1.jpg",
+            "image": `${image}`,
             "rating": 3,
             "price": 150,
             "author": "John Doe",
