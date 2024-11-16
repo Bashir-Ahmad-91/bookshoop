@@ -1,11 +1,23 @@
-import image from '../assets/images/book-img/1.jpg'
+import image_1 from '../assets/images/book-img/1.jpg';
+import image_2 from '../assets/images/book-img/2.jpg';
+import image_3 from '../assets/images/book-img/3.jpg';
+import image_4 from '../assets/images/book-img/4.jpg';
+import image_5 from '../assets/images/book-img/5.jpg';
+import image_6 from '../assets/images/book-img/6.jpg';
+import image_7 from '../assets/images/book-img/7.jpg';
+import image_8 from '../assets/images/book-img/8.jpg';
+import image_9 from '../assets/images/book-img/9.jpg';
+import image_10 from '../assets/images/book-img/10.jpg';
+import image_11 from '../assets/images/book-img/11.jpg';
+import image_12 from '../assets/images/book-img/12.jpg';
+
 function initialData () {
     return(
     [
         {
             "id": "01",
             "name": "The Blacked Hunter",
-            "image": `${image}`,
+            "image": `${image_1}`,
             "rating": 3,
             "price": 150,
             "author": "John Doe",
@@ -15,7 +27,7 @@ function initialData () {
         {
             "id": "02",
             "name": "Trecrcok Hengack",
-            "image": "2.jpg",
+            "image": `${image_2}`,
             "rating": 4,
             "price": 190,
             "author": "Jane Smith",
@@ -25,7 +37,7 @@ function initialData () {
         {
             "id": "03",
             "name": "Resntin Laur Goook",
-            "image": "3.jpg",
+            "image": `${image_3}`,
             "rating": 5,
             "price": 130,
             "author": "Alice Johnson",
@@ -35,7 +47,7 @@ function initialData () {
         {
             "id": "04",
             "name": "Lever Lenatti Face",
-            "image": "4.jpg",
+            "image": `${image_4}`,
             "rating": 2,
             "price": 160,
             "author": "Robert Brown",
@@ -45,7 +57,7 @@ function initialData () {
         {
             "id": "05",
             "name": "Prenlter Prestion Pssquik",
-            "image": "5.jpg",
+            "image": `${image_5}`,
             "rating": 3,
             "price": 175,
             "author": "Emily Davis",
@@ -55,7 +67,7 @@ function initialData () {
         {
             "id": "06",
             "name": "Slopjnnr Sunze",
-            "image": "6.jpg",
+            "image": `${image_6}`,
             "rating": 4,
             "price": 125,
             "author": "Michael Wilson",
@@ -65,7 +77,7 @@ function initialData () {
         {
             "id": "07",
             "name": "Woodlands Nursing Home",
-            "image": "7.jpg",
+            "image": `${image_7}`,
             "rating": 5,
             "price": 185,
             "author": "Sarah Martinez",
@@ -75,7 +87,7 @@ function initialData () {
         {
             "id": "08",
             "name": "The Big Deal",
-            "image": "8.jpg",
+            "image": `${image_8}`,
             "rating": 2,
             "price": 155,
             "author": "David Taylor",
@@ -85,7 +97,7 @@ function initialData () {
         {
             "id": "09",
             "name": "The Crow Fold",
-            "image": "9.jpg",
+            "image": `${image_9}`,
             "rating": 3,
             "price": 145,
             "author": "Sophia Anderson",
@@ -95,7 +107,7 @@ function initialData () {
         {
             "id": "10",
             "name": "The Lion The Witch",
-            "image": "10.jpg",
+            "image": `${image_10}`,
             "rating": 4,
             "price": 140,
             "author": "Chris Thomas",
@@ -105,7 +117,7 @@ function initialData () {
         {
             "id": "11",
             "name": "Alone a True Story",
-            "image": "11.jpg",
+            "image": `${image_11}`,
             "rating": 5,
             "price": 180,
             "author": "Karen White",
@@ -115,16 +127,14 @@ function initialData () {
         {
             "id": "12",
             "name": "When I Feel Alone",
-            "image": "12.jpg",
+            "image": `${image_12}`,
             "rating": 2,
             "price": 135,
             "author": "Jason Harris",
             "description": "When I Feel Alone is a deeply introspective story that explores themes of isolation, connection, and healing. Through the protagonist's journey, readers are reminded of the importance of reaching out and finding support in others.",
             "status": "coming_soon"
         }
-    ]
-
-)
+    ]);
 }
 
-export { initialData }
+export { initialData };
