@@ -20,8 +20,6 @@ function BookCart({item, favoritHandler}) {
      
   } 
   const clickHandler = () => {
-   
-  
     
     const dataChak =cartData.some(i => i.id == item.id) 
     !dataChak &&
@@ -29,8 +27,10 @@ function BookCart({item, favoritHandler}) {
       ...cartData,
       item 
     ]);
-    
+    dataChak && document.getElementById('cart_button').classList.add("opacity-35")
   }
+  const dataChak =cartData.some(i => i.id == item.id) 
+  
 
   
   
@@ -47,8 +47,13 @@ function BookCart({item, favoritHandler}) {
           ))}
         </div>
         <div className="mt-4 flex justify-between items-center">
-          {/* <button className="text-base font-inter font-medium py-2  bg-green-400">$140 | Add to cart</button> */}
-          <button onClick={clickHandler} className={"text-base px-2 py-2 bg-green-400 my-button font-bodyFont rounded-md relative shadow-md dark:text-black z-0"}>${item.price} | Add to cart</button>
+          {dataChak 
+          ?
+          <button id="cart_button" onClick={clickHandler} className={"text-base px-2 py-2 bg-green-400 my-button font-bodyFont rounded-md relative shadow-md dark:text-black z-0 opacity-55"}>${item.price} {dataChak ?  "| Added to cart" :"| Add to cart"}</button>
+        :
+          <button id="cart_button" onClick={clickHandler} className={"text-base px-2 py-2 bg-green-400 my-button font-bodyFont rounded-md relative shadow-md dark:text-black z-0"}>${item.price} {dataChak ?  "| Added to cart" :"| Add to cart"}</button>
+         }
+          
           <div onClick={handleFavorit} className="w-[38px] h-[38px] border-2 border-[#00D991] rounded-lg text-2xl flex justify-center items-center text-green-400 ">
             {isFavorit ? <IoHeart /> : <IoHeartOutline />}
           </div>
